@@ -31,8 +31,7 @@ func main() {
 	r := mux.NewRouter()
 
 	// Associate a path with a handler function on the router
-	r.HandleFunc("/livestream/{word}",
-		echoHandler).Methods("GET")
+	r.HandleFunc("/livestream/{word}", echoHandler)
 
 	r.HandleFunc("/method/", getHandler).Methods("GET")
 	r.HandleFunc("/method/", putHandler).Methods("PUT")
